@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DOM assignment</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
+</head>
+<body>
+  <main>
+    <section class="add-new">
+      <h2>What would you like to buy?</h2>
+      <div class="labeltrick new-name">
+        <input id="new-name" type="text" maxlength="30" required>
+        <label for="new-name">Item name</label>
+      </div>
+      <div class="labeltrick new-quantity">
+        <input id="new-quantity" type="number" required>
+        <label for="new-quantity">How many</label>
+      </div>
+      <button id='add'>ADD</button>
+    </section>
+    <section>
+      <h3>Shopping list</h3>
+      <ul id='shopping-list'></ul>
+    </section>
+    <section>
+      <h3 class='done-list-header'>Done list</h3>
+      <span class='toggle-icon'></span>
+      <ul id="done_list"></ul>
+    </section>
+
+  </main>
+
+  <script src='main.js'></script>
+</body>
+</html>

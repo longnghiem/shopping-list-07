@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: lora, sans-serif;
+}
+body {
+  padding-top: 1em;
+  background-color: #373F51;
+  color: #373F51;
+}
+main {
+  display: grid;
+  justify-content: center;
+  /* background-color: #eee; */
+  background: linear-gradient(#E8F7EE, #E8F7EE);
+  width: 600px;
+  margin: auto;
+  text-align: center;
+
+}
+section {
+  margin: 2em 0;
+  min-width: 500px;
+}
+button {
+  width: 6em;
+  height: 2em;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+h3 {
+  font-weight: bolder;
+  font-size: 25px;
+  text-align: center;
+  padding-bottom: 1em;
+  /* color: #C84630; */
+  display: inline-block;
+
+}
+.add-new {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #8DA7BE;
+  padding: 1em;
+  display: grid;
+  /* justify-items: center; */
+  grid-template-areas:
+  'header header header'
+  'name name quantity'
+  '. . add';
+  grid-row-gap: 1em;
+}
+.add-new h2 {
+  grid-area: header;
+  text-align: left;
+  padding-bottom: 0.8em;
+  /* color: #C84630; */
+}
+.add-new input {
+  width: 100%;
+  height: 30px;
+  /* color: #0d3b3f; */
+  border-radius: 4px;
+  text-indent: 6px;
+  border: none;
+}
+.new-name {
+  grid-area: name;
+  margin-right: -50px;
+}
+.new-quantity {
+  grid-area: quantity;
+  justify-self: end;
+}
+.add-new button {
+  font-weight: bold;
+  grid-area: add;
+  justify-self: end;
+  background-color: #373F51;
+  color: #C1BCAC;
+}
+.add-new button:hover {
+  background-color: #C84630;
+  color: #E8F7EE;
+}
+.labeltrick {
+  position: relative;
+}
+.labeltrick label {
+  position: absolute;
+  left: 8px;
+  bottom: 6px;
+  /* color: #6e757f; */
+  transition: 1s ease all;
+}
+.add-new input:focus + label,
+.add-new input:valid + label {
+  /* color: #124c51; */
+  bottom: 34px;
+  font-weight: bold;
+}
+
+
+/* shopping list ---------- */
+.item {
+  display: grid;
+  grid-template-columns: 50px 2fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  background-color: #8DA7BE;
+  border-radius: 5px;
+  position: relative;
+  /* color: #225054; */
+  font-size: 18px;
+  padding: 2px 0;
+}
+.item:nth-child(odd),
+.item:nth-child(odd) .delete {
+  background-color: #C1BCAC;
+
+}
+.delete {
+  justify-self: end;
+  border-left: solid 2px #225054;
+  border-radius: 0;
+  margin: 3px 0;
+  background-color: #8DA7BE;
+  font-weight: 900;
+}
+.delete:hover {
+  color: #C84630;
+}
+.fakeBox {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border: 1px solid #373F51;
+  content: "";
+  background: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+}
+#shopping-list span:before {
+  content: '';
+  height: 8px;
+  width: 4px;
+  border-right: solid 2px #747b8b;
+  border-bottom: solid 2px #747b8b;
+  position: absolute;
+  left: 22px;
+  bottom: 14px;
+  transform: rotate(45deg);
+}
+#shopping-list span:hover:before {
+  border-right: solid 2px #373F51;
+  border-bottom: solid 2px #373F51;
+}
+.fakeBox:hover {
+  border: 2px solid #373F51;
+}
+
+/* done list ---------- */
+#done_list span:before {
+  content: '';
+  height: 8px;
+  width: 4px;
+  border-right: solid 2px #373F51;
+  border-bottom: solid 2px #373F51;
+  position: absolute;
+  left: 22px;
+  bottom: 14px;
+  transform: rotate(45deg);
+}
+#done_list .fakeBox {
+  border: 2px solid #373F51;
+}
+#done_list .fakeBox:hover {
+  border: 2px solid #C84630;
+}
+#done_list span:hover:before {
+  border: none;
+  font-size: 14px;
+  content: 'X';
+  font-weight: 700;
+  color: #C84630;
+  transform: none;
+  position: static;
+  display: block;
+  margin-left: 4px;
+}
+/* hidden elements ---------- */
+.hidden {
+  display: none;
+}
+.done-list-header {
+  cursor: pointer;
+}
+section:last-child {
+  position: relative;
+}
+.toggle-icon {
+  display: inline-block;
+  content: '';
+  height: 8px;
+  width: 8px;
+  border-right: solid 2px #373F51;
+  border-bottom: solid 2px #373F51;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  transform: rotate(45deg);
+  /* cursor: pointer; */
+  transition: 0.1s ease-out;
+}
+.rotate {
+  transform: rotate(225deg);
+}
