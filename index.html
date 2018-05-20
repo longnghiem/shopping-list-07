@@ -10,15 +10,16 @@
 </head>
 <body>
   <main>
+    <img src="bg.png">
     <section class="add-new">
       <h2>What would you like to buy?</h2>
       <div class="labeltrick new-name">
-        <input id="new-name" type="text" maxlength="30" required>
-        <label for="new-name">Item name</label>
+        <input id="new-name" type="text" maxlength="30" required onchange="labelUp(event)">
+        <label id='new-name-label' for="new-name">Item name</label>
       </div>
       <div class="labeltrick new-quantity">
-        <input id="new-quantity" type="number" required>
-        <label for="new-quantity">How many</label>
+        <input id="new-quantity" type="number" min="1" required onchange="labelUp(event)">
+        <label id='new-quantity-label' for="new-quantity">How many</label>
       </div>
       <button id='add'>ADD</button>
     </section>
@@ -27,8 +28,10 @@
       <ul id='shopping-list'></ul>
     </section>
     <section>
-      <h3 class='done-list-header'>Done list</h3>
-      <span class='toggle-icon'></span>
+      <div class="toggle">
+        <h3>Done list</h3>
+        <span class='toggle-icon'></span>
+      </div>
       <ul id="done_list"></ul>
     </section>
 
