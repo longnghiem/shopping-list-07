@@ -34,6 +34,7 @@ function render() {
     itemName.setAttribute("onkeypress", "onenterHandle(event)");
     itemName.setAttribute("contenteditable", "true");
 
+    // QUANTITY ----------
     const itemQuantity = document.createElement("div");
     itemQuantity.innerText = list_item.quantity;
     itemQuantity.setAttribute("onfocusout", "focusoutHandle(event)");

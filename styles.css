@@ -28,6 +28,7 @@ main {
   width: 600px;
   margin: auto;
   text-align: center;
+  box-shadow: 0 5px 10px 0 hsla(0, 0%, 0%, 0.5);
 }
 main > * {
   z-index: 2;
@@ -71,6 +72,7 @@ h3 {
   'name name quantity'
   '. . add';
   grid-row-gap: 1em;
+  box-shadow: 0 2px 4px 0 hsla(0, 0%, 0%, 0.2);
 }
 .add-new h2 {
   grid-area: header;
@@ -219,7 +221,6 @@ h3 {
   display: block;
   margin-left: 4px;
 }
-
 /* hidden elements ---------- */
 .hidden {
   display: none;
